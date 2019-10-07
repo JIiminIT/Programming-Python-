@@ -10,7 +10,7 @@ for i in range(1,5):
     result = a >> i
     print("%d >> %d = %d" % (a,i,result))
 
-input int('정수를 입렫하시오')
+input(int('정수를 입렫하시오'))
 
 #다른 문제
 
