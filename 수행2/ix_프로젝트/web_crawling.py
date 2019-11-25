@@ -10,10 +10,16 @@ if __name__ == '__main__':
     soup = BeautifulSoup(data,'lxml')
     #print(soup)
 
+    html = "<html><head><meta charset = 'utf-8'></head><body>"
     cartoon_titles = soup.find_all('td', attrs = {'class' : 'title'}) #td에 class title 속성을 찾음
     for cartoon_titles in cartoon_titles:
         title = cartoon_titles.find('a').text
-        link = cartoon_titles.find('a').get("herf") #href 속성 가져오기
+        link = cartoon_titles.find('a').get("href") #href 속성 가져오기
         link = 'https://comic.naver.com' + link
         print(title)
         print(link)
+        html += "<a href = '{}'</a><br/>".format(link,title) #<a href ='link'>title</a>
+    html += '</body></html>'
+    #print(html)
+    with open('유미의 세포들.html', 'w', encoding='utf-8') as f:
+        f.write(html)
