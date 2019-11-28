@@ -8,6 +8,7 @@ if __name__ == '__main__':
 
     data = urlopen('https://comic.naver.com/webtoon/list.nhn?titleId=651673&weekday=wed')
     soup = BeautifulSoup(data,'lxml')
+    data.close()
     #print(soup)
 
     html = "<html><head><meta charset = 'utf-8'></head><body>"
