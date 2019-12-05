@@ -5,6 +5,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="Sh.write_binary_file.byte_arr" />
+          <option value="수행2.ix_프로젝트.web_crawing_youtube.url" />
         </list>
       </option>
     </inspection_tool>
