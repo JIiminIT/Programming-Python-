@@ -1,6 +1,7 @@
 import pyautogui as pag
 import time
 if __name__ == '__main__':
+    time.sleep(2)
     pag.moveTo(200,200,2)
     pag.click()
     pag.typerwite("sdlkjfdslkfdjsflkdsjfslkdjsf", interval = 0.5)
